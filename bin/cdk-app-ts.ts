@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import * as cdk from '@aws-cdk/core';
-import { CdkAppTsStack } from '../lib/cdk-app-ts-stack';
+import { SnsStack } from '../lib/sns-stack';
+import { Queuestack } from '../lib/Queue-stack';
 
 const app = new cdk.App();
-new CdkAppTsStack(app, 'CdkAppTsStack');
+new SnsStack(app, 'sns');
+new Queuestack(app, 'queue');
